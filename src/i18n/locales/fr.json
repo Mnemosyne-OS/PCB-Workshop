@@ -1,0 +1,196 @@
+{
+  "app": {
+    "title": "Atelier PCB"
+  },
+  "kicad": {
+    "looking": "recherche…",
+    "absent": "non installé",
+    "tooOld": "version {{min}} ou plus récente requise"
+  },
+  "level": {
+    "label": "Niveau",
+    "beginner": "Débutant",
+    "maker": "Amateur",
+    "pro": "Pro"
+  },
+  "projects": {
+    "label": "Projets",
+    "add": "Ajouter",
+    "none": "Aucun projet pour l'instant.",
+    "missing": "fichiers absents",
+    "board": "carte",
+    "schematic": "schéma",
+    "forget": "Retirer {{name}} de la liste"
+  },
+  "state": {
+    "loading": "Chargement…",
+    "reading": "Lecture des fichiers…"
+  },
+  "action": {
+    "dismiss": "Fermer",
+    "showFolder": "Montrer dans le dossier",
+    "close": "Fermer"
+  },
+  "views": {
+    "label": "Vues",
+    "board": "Carte",
+    "schematic": "Schéma",
+    "check": "Vérifier",
+    "order": "Commande",
+    "render": "Rendu",
+    "noBoard": "Ce projet n'a pas de fichier .kicad_pcb.",
+    "noSchematic": "Ce projet n'a pas de fichier .kicad_sch.",
+    "readAgain": "Relire"
+  },
+  "first": {
+    "label": "Premiers pas",
+    "install": "Installer KiCad 10",
+    "download": "Télécharger",
+    "demo": "Ouvrir une carte de démo, ou ton propre projet",
+    "add": "L'ajouter ici avec « Ajouter »",
+    "check": "Vérifier la carte",
+    "render": "Voir la carte en 3D",
+    "order": "Préparer les fichiers pour le fabricant",
+    "demoWhere": "KiCad installe des cartes de démo dans son dossier share/kicad/demos. StickHub est une petite carte pour commencer."
+  },
+  "severity": {
+    "error": "Erreur",
+    "warning": "Alerte",
+    "exclusion": "Exclue",
+    "other": "Note"
+  },
+  "check": {
+    "run": "Vérifier",
+    "running": "Vérification",
+    "drc": "Carte (DRC)",
+    "erc": "Schéma (ERC)",
+    "notRun": "Pas encore vérifié.",
+    "counts": "{{errors}} erreurs · {{warnings}} alertes",
+    "truncated": "Le rapport est long : les 500 premiers points sont listés, les comptes les incluent tous.",
+    "none": "Rien trouvé.",
+    "excluded": "Exclue dans KiCad par le concepteur"
+  },
+  "verdict": {
+    "unknown": "Non vérifiée",
+    "blocked": "Erreurs à corriger",
+    "warnings": "Alertes à relire",
+    "clean": "Prête à commander"
+  },
+  "keep": {
+    "button": "Garder en mémoire",
+    "saved": "Gardé dans la mémoire de l'atelier."
+  },
+  "order": {
+    "maker": "Fabricant",
+    "make": "Préparer la commande",
+    "running": "Préparation",
+    "before": {
+      "unknown": "Vérifie la carte avant de commander.",
+      "blocked": "La vérification a trouvé des erreurs. Une carte fabriquée ainsi risque de ne pas marcher.",
+      "warnings": "La vérification a trouvé des alertes. Lis-les avant de commander."
+    },
+    "empty": "Fichiers Gerber, perçage, nomenclature et placement, au format que demande JLCPCB.",
+    "step": {
+      "zip": "Envoie {{zip}} sur la page de devis",
+      "assembly": "Pour l'assemblage, ajoute les fichiers BOM et CPL du même dossier",
+      "upload": "Ouvrir la page de devis"
+    },
+    "layers": "Couches",
+    "files": "{{n}} fichiers",
+    "withoutPart": "{{n}} lignes sur {{total}} de la nomenclature n'ont pas de numéro de pièce JLCPCB (LCSC). JLCPCB te demandera de choisir ces pièces."
+  },
+  "render": {
+    "side": "Face",
+    "top": "Dessus",
+    "bottom": "Dessous",
+    "run": "Rendu",
+    "running": "Rendu en cours",
+    "enlarge": "Plein écran",
+    "alt": "Rendu de la carte, face {{side}}",
+    "empty": "Une image de la carte façon photo, faite par KiCad."
+  },
+  "step": {
+    "label": "Modèle 3D (STEP)",
+    "make": "Exporter le modèle STEP",
+    "running": "Export",
+    "parts": "Ouvre-le dans Parts pour éclater la carte pièce par pièce."
+  },
+  "error": {
+    "generic": "Échec : {{code}}",
+    "NO_HOST": "Ouvre l'atelier dans Mnemosyne OS.",
+    "KICAD_NOT_FOUND": "KiCad n'est pas installé sur cet ordinateur.",
+    "KICAD_TOO_OLD": "Ce KiCad est trop ancien pour l'atelier.",
+    "KICAD_TIMEOUT": "KiCad a mis trop longtemps et a été arrêté.",
+    "KICAD_FILE_UNREADABLE": "KiCad n'a pas pu lire ce fichier.",
+    "KICAD_FAILED": "KiCad s'est arrêté sur une erreur.",
+    "KICAD_OUTPUT_TOO_LARGE": "La réponse de KiCad était trop grosse.",
+    "BUSY": "Un autre travail tourne. Attends qu'il finisse.",
+    "UNKNOWN_PROJECT": "Ce projet n'est plus dans la liste.",
+    "PROJECT_GONE": "Les fichiers du projet ont disparu de leur dossier.",
+    "NO_BOARD": "Ce projet n'a pas de fichier de carte (.kicad_pcb).",
+    "NO_SCHEMATIC": "Ce projet n'a pas de fichier de schéma (.kicad_sch).",
+    "SOURCES_TOO_LARGE": "Ce projet est trop gros pour être dessiné ici. Les vérifications marchent quand même.",
+    "NOT_A_KICAD_FILE": "Choisis un fichier .kicad_pro, .kicad_pcb ou .kicad_sch.",
+    "TOO_MANY_PROJECTS": "La liste est pleine. Retire d'abord un projet.",
+    "STORE_UNREADABLE": "La liste des projets n'a pas pu être lue.",
+    "REPORT_UNREADABLE": "Le rapport de KiCad n'a pas pu être lu.",
+    "POSITIONS_UNREADABLE": "Le fichier de placement n'a pas pu être lu.",
+    "NOTHING_PLOTTED": "KiCad n'a écrit aucun fichier Gerber.",
+    "NOTHING_WRITTEN": "KiCad n'a écrit aucun fichier.",
+    "NOTHING_TO_SHOW": "Rien n'a encore été produit pour cette vue.",
+    "PERMISSION_DENIED": "L'atelier n'a pas le droit d'écrire dans sa mémoire.",
+    "FILE_LOCKED": "Un fichier est ouvert dans un autre programme. Ferme-le et recommence.",
+    "FILE_MISSING": "Un fichier du projet est introuvable.",
+    "DISK_FULL": "Le disque est plein.",
+    "INTERNAL_ERROR": "Un échec dans Mnemosyne OS. Le journal de l'app a les détails.",
+    "UNKNOWN_FABRICATOR": "Ce fabricant n'est pas encore pris en charge.",
+    "UNKNOWN_SIDE": "La face doit être dessus ou dessous.",
+    "BOM_UNREADABLE": "La nomenclature n'a pas pu être lue.",
+    "STORE_WRITE_FAILED": "La liste des projets n'a pas pu être enregistrée.",
+    "NO_PROJECT": "Ouvre d'abord un projet."
+  },
+  "explain": {
+    "_other": "KiCad signale cet élément. Ouvre la carte dans KiCad à l'endroit indiqué pour voir de quoi il s'agit.",
+    "clearance": "Deux éléments en cuivre sont plus proches que les règles ne le permettent. Le fabricant ne peut pas les séparer, ils risquent de se toucher.",
+    "unconnected_items": "Une connexion dessinée dans le schéma n'a pas encore de piste sur la carte.",
+    "track_width": "Une piste est plus fine que les règles ne le permettent. Elle peut casser ou porter trop peu de courant.",
+    "hole_clearance": "Un trou est trop près du cuivre. Le perçage peut l'entamer.",
+    "copper_edge_clearance": "Du cuivre est trop près du bord de la carte. La découpe peut le mettre à nu ou le couper.",
+    "courtyards_overlap": "Deux composants occupent la même place. Ils risquent de ne pas tenir tous les deux au montage.",
+    "silk_overlap": "Deux textes ou dessins imprimés se chevauchent et seront difficiles à lire.",
+    "silk_over_copper": "De l'encre imprimée tombe sur une pastille. Le fabricant la coupe en général.",
+    "solder_mask_bridge": "Il manque du vernis entre deux pastilles. La soudure peut les relier.",
+    "annular_width": "L'anneau de cuivre autour d'un trou est trop fin. Le trou peut en sortir.",
+    "drill_out_of_range": "Un trou est plus petit ou plus grand que les règles ne le permettent.",
+    "hole_to_hole": "Deux trous sont trop proches. La carte peut se fendre entre eux.",
+    "invalid_outline": "Le contour de la carte n'est pas une forme fermée. Le fabricant ne peut pas la découper.",
+    "isolated_copper": "Une zone de cuivre n'est reliée à rien. Elle ne sert en général à rien.",
+    "starved_thermal": "Une pastille dans une zone de cuivre a trop peu de rayons. Elle peut être mal reliée.",
+    "track_dangling": "Une piste s'arrête dans le vide, reliée à rien à un bout.",
+    "via_dangling": "Un via n'est relié à rien, ou à une seule couche.",
+    "lib_footprint_issues": "KiCad ne trouve pas la bibliothèque d'empreintes de ce composant sur cet ordinateur. La carte est bonne ; c'est le lien vers la bibliothèque qui manque.",
+    "lib_footprint_mismatch": "Cette empreinte diffère de celle de sa bibliothèque.",
+    "missing_footprint": "Un composant du schéma manque sur la carte.",
+    "extra_footprint": "Un composant de la carte n'est pas dans le schéma.",
+    "duplicate_footprints": "Deux composants de la carte ont la même référence.",
+    "net_conflict": "La connexion d'une pastille sur la carte diffère du schéma.",
+    "shorting_items": "Deux signaux différents se touchent : c'est un court-circuit.",
+    "pin_not_connected": "Une broche d'un composant n'est reliée à rien. Marque-la « non connectée » si c'est voulu.",
+    "pin_not_driven": "Une broche d'entrée ne reçoit de signal d'aucune sortie.",
+    "power_pin_not_driven": "Une broche d'alimentation n'est reliée à aucune source. Ajoute un drapeau d'alimentation si le courant vient d'un connecteur.",
+    "label_dangling": "Une étiquette n'est attachée à aucun fil.",
+    "wire_dangling": "Un fil s'arrête dans le vide.",
+    "pin_to_pin": "Deux broches qui ne doivent pas être reliées le sont, par exemple deux sorties.",
+    "unannotated": "Un composant n'a pas encore de numéro (R?). Annote le schéma.",
+    "duplicate_reference": "Deux composants du schéma ont la même référence.",
+    "lib_symbol_issues": "KiCad ne trouve pas la bibliothèque de ce symbole sur cet ordinateur.",
+    "multiple_net_names": "Un même fil porte deux noms différents.",
+    "global_label_dangling": "Une étiquette globale n'est attachée à aucun fil.",
+    "endpoint_off_grid": "Le bout d'un fil ou d'une broche est hors de la grille. Il peut sembler relié sans l'être.",
+    "footprint_link_issues": "L'empreinte choisie pour un symbole est introuvable.",
+    "text_thickness": "Un trait de texte est trop fin pour que le fabricant l'imprime.",
+    "text_height": "Un texte est trop petit pour que le fabricant l'imprime.",
+    "silk_edge_clearance": "De l'encre imprimée est trop près du bord de la carte. Elle peut être coupée.",
+    "holes_co_located": "Deux trous sont au même endroit. L'un des deux est sans doute une erreur."
+  }
+}

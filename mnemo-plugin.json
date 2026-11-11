@@ -1,0 +1,203 @@
+{
+  "name": "@mnemosyne-plugins/pcb",
+  "displayName": "PCB Workshop",
+  "version": "0.1.0",
+  "icon": "icon.svg",
+  "category": "Creation",
+  "vendor": "Mnemosyne Labs",
+  "license": "MIT",
+  "description": "A workshop for printed circuit boards, driving the KiCad installed on your computer. See the board and the schematic, check them with KiCad's own rules explained in plain words, render the board like a photo, export its 3D model, and prepare the files a board maker asks for (JLCPCB first). You pick each project in a file window; your KiCad files are only read.",
+  "descriptionI18n": {
+    "en": "A workshop for printed circuit boards, driving the KiCad installed on your computer. See the board and the schematic, check them with KiCad's own rules explained in plain words, render the board like a photo, export its 3D model, and prepare the files a board maker asks for (JLCPCB first). You pick each project in a file window; your KiCad files are only read.",
+    "fr": "Un atelier pour les cartes électroniques, qui pilote le KiCad installé sur ton ordinateur. Voir la carte et le schéma, les vérifier avec les règles de KiCad expliquées en mots simples, faire un rendu de la carte façon photo, exporter son modèle 3D et préparer les fichiers qu'un fabricant demande (JLCPCB d'abord). Tu choisis chaque projet dans une fenêtre de fichier ; tes fichiers KiCad sont seulement lus.",
+    "es": "Un taller para placas de circuito impreso, que maneja el KiCad instalado en tu ordenador. Ver la placa y el esquema, revisarlos con las reglas de KiCad explicadas en palabras sencillas, renderizar la placa como una foto, exportar su modelo 3D y preparar los archivos que pide un fabricante (JLCPCB primero). Eliges cada proyecto en una ventana de archivo; tus archivos de KiCad solo se leen."
+  },
+  "keywords": [
+    "pcb",
+    "kicad",
+    "electronics",
+    "gerber",
+    "drc",
+    "jlcpcb",
+    "maker"
+  ],
+  "permissions": [
+    "kicad:run",
+    "vault:write"
+  ],
+  "_permissions": "kicad:run runs KiCad's command line on a project you pick in the host's file window, with a closed list of jobs (DRC, ERC, order pack, STEP, render). Your KiCad files are only read; what KiCad makes goes into a work folder of Mnemosyne OS. vault:write keeps a board sheet (checks found, order pack made, your note) in the workshop's own sandbox vault, on your press. Nothing leaves the machine; the JLCPCB link only opens their page in your browser.",
+  "updateStrategy": "git",
+  "repository": "https://github.com/Mnemosyne-OS/PCB-Workshop",
+  "entrypoints": {
+    "renderer": "index.html"
+  },
+  "widgets": [
+    {
+      "id": "pcb-main",
+      "icon": "🔌",
+      "name": "PCB Workshop",
+      "route": "index.html",
+      "defaultWidth": 1280,
+      "defaultHeight": 820
+    }
+  ],
+  "agentGuide": [
+    "Name a project the way the person says it (« la carte LED », « stickhub »). Several matches are refused with their names (AMBIGUOUS): pick one and call again.",
+    "check, orderPack and render are long (a big board takes over a minute): they answer started; follow with status until busy is null, then read drc, erc, orderPack or render there.",
+    "Before an order pack, run check: status.verdict says blocked (errors), warnings or clean. Tell the person what blocks before they order.",
+    "explain turns a finding type from status (clearance, unconnected_items…) into one plain sentence in the person's language.",
+    "The workshop answers KICAD_NOT_FOUND when KiCad is not installed: tell the person, never retry."
+  ],
+  "agentActions": [
+    {
+      "id": "status",
+      "summary": "Where the workshop stands: KiCad's version, the open project and view, the job running, and the last check (errors, warnings, the main finding types explained), order pack and render.",
+      "effect": "read",
+      "params": {}
+    },
+    {
+      "id": "projects",
+      "summary": "The KiCad projects the person added to the workshop, by name, with whether each has a board and a schematic.",
+      "effect": "read",
+      "params": {}
+    },
+    {
+      "id": "openProject",
+      "summary": "Open a project on the person's screen, as a click on its tile does.",
+      "details": "project is its name as said. Several matches are refused with their names (AMBIGUOUS).",
+      "effect": "write",
+      "params": {
+        "project": {
+          "type": "string",
+          "description": "The project's name as said.",
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "project"
+      ]
+    },
+    {
+      "id": "showView",
+      "summary": "Show one view of the open project: the board, the schematic, the check, the order pack or the render.",
+      "effect": "write",
+      "params": {
+        "view": {
+          "type": "string",
+          "description": "board, schematic, check, order or render.",
+          "enum": [
+            "board",
+            "schematic",
+            "check",
+            "order",
+            "render"
+          ]
+        }
+      },
+      "required": [
+        "view"
+      ]
+    },
+    {
+      "id": "check",
+      "summary": "Check the board (DRC) and the schematic (ERC) with KiCad, as the « Check » button does.",
+      "details": "Long: answers started; status gives the result. Without project, the open one. Refused while a job runs (BUSY) and when KiCad is absent (KICAD_NOT_FOUND).",
+      "effect": "write",
+      "params": {
+        "project": {
+          "type": "string",
+          "description": "The project's name as said; empty = the open one.",
+          "maxLength": 200
+        }
+      }
+    },
+    {
+      "id": "orderPack",
+      "summary": "Prepare the files JLCPCB asks for (Gerber and drill in a zip, BOM and placement beside it), as the « Make the order pack » button does. Nothing is sent or ordered.",
+      "details": "Long: answers started; status gives the zip's name. Run check first and tell the person what it found.",
+      "effect": "write",
+      "params": {
+        "project": {
+          "type": "string",
+          "description": "The project's name as said; empty = the open one.",
+          "maxLength": 200
+        }
+      }
+    },
+    {
+      "id": "render",
+      "summary": "Render the board like a photo with KiCad, top or bottom side, on the person's screen.",
+      "details": "Long: answers started; status says when it is done.",
+      "effect": "write",
+      "params": {
+        "project": {
+          "type": "string",
+          "description": "The project's name as said; empty = the open one.",
+          "maxLength": 200
+        },
+        "side": {
+          "type": "string",
+          "description": "top or bottom.",
+          "enum": [
+            "top",
+            "bottom"
+          ]
+        }
+      }
+    },
+    {
+      "id": "explain",
+      "summary": "One plain sentence explaining a KiCad finding type (from status), in the person's language.",
+      "effect": "read",
+      "params": {
+        "type": {
+          "type": "string",
+          "description": "The finding type, e.g. clearance.",
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    {
+      "id": "keepSheet",
+      "summary": "Keep the open board's sheet in the workshop's memory: the checks' findings, the order pack, and a note.",
+      "details": "Refused with NOTHING_TO_KEEP before a check or an order pack.",
+      "effect": "write",
+      "params": {
+        "note": {
+          "type": "string",
+          "description": "What the person wants remembered about this board.",
+          "maxLength": 2000
+        }
+      }
+    }
+  ],
+  "voiceCommands": {
+    "fr": [
+      "vérifie ma carte",
+      "prépare la commande JLCPCB",
+      "fais un rendu de la carte",
+      "montre le schéma",
+      "ouvre le projet stickhub",
+      "explique l'erreur clearance"
+    ],
+    "en": [
+      "check my board",
+      "prepare the JLCPCB order",
+      "render the board",
+      "show the schematic",
+      "open the stickhub project",
+      "explain the clearance error"
+    ],
+    "es": [
+      "revisa mi placa",
+      "prepara el pedido de JLCPCB",
+      "renderiza la placa",
+      "muestra el esquema",
+      "abre el proyecto stickhub",
+      "explica el error clearance"
+    ]
+  }
+}

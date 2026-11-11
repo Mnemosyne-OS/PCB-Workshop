@@ -1,0 +1,196 @@
+{
+  "app": {
+    "title": "PCB Workshop"
+  },
+  "kicad": {
+    "looking": "looking…",
+    "absent": "not installed",
+    "tooOld": "version {{min}} or later needed"
+  },
+  "level": {
+    "label": "Level",
+    "beginner": "Beginner",
+    "maker": "Maker",
+    "pro": "Pro"
+  },
+  "projects": {
+    "label": "Projects",
+    "add": "Add",
+    "none": "No project yet.",
+    "missing": "files gone",
+    "board": "board",
+    "schematic": "schematic",
+    "forget": "Remove {{name}} from the list"
+  },
+  "state": {
+    "loading": "Loading…",
+    "reading": "Reading the files…"
+  },
+  "action": {
+    "dismiss": "Dismiss",
+    "showFolder": "Show in folder",
+    "close": "Close"
+  },
+  "views": {
+    "label": "Views",
+    "board": "Board",
+    "schematic": "Schematic",
+    "check": "Check",
+    "order": "Order pack",
+    "render": "Render",
+    "noBoard": "This project has no .kicad_pcb file.",
+    "noSchematic": "This project has no .kicad_sch file.",
+    "readAgain": "Read again"
+  },
+  "first": {
+    "label": "First steps",
+    "install": "Install KiCad 10",
+    "download": "Download",
+    "demo": "Open a demo board, or your own project",
+    "add": "Add it here with « Add »",
+    "check": "Check the board",
+    "render": "Render the board in 3D",
+    "order": "Make the order pack for the board maker",
+    "demoWhere": "KiCad installs demo boards in its share/kicad/demos folder. StickHub is a small one to start with."
+  },
+  "severity": {
+    "error": "Error",
+    "warning": "Warning",
+    "exclusion": "Excluded",
+    "other": "Note"
+  },
+  "check": {
+    "run": "Check",
+    "running": "Checking",
+    "drc": "Board (DRC)",
+    "erc": "Schematic (ERC)",
+    "notRun": "Not checked yet.",
+    "counts": "{{errors}} errors · {{warnings}} warnings",
+    "truncated": "The report is long; the first 500 findings are listed, the counts include all of them.",
+    "none": "Nothing found.",
+    "excluded": "Excluded in KiCad by the designer"
+  },
+  "verdict": {
+    "unknown": "Not checked",
+    "blocked": "Errors to fix",
+    "warnings": "Warnings to review",
+    "clean": "Ready to order"
+  },
+  "keep": {
+    "button": "Keep in memory",
+    "saved": "Kept in the workshop's memory."
+  },
+  "order": {
+    "maker": "Board maker",
+    "make": "Make the order pack",
+    "running": "Preparing",
+    "before": {
+      "unknown": "Check the board before ordering.",
+      "blocked": "The check found errors. A board made like this may not work.",
+      "warnings": "The check found warnings. Read them before ordering."
+    },
+    "empty": "Gerber, drill, BOM and placement files, in the shape JLCPCB asks for.",
+    "step": {
+      "zip": "Upload {{zip}} on the quote page",
+      "assembly": "For assembly, add the BOM and CPL files from the same folder",
+      "upload": "Open the quote page"
+    },
+    "layers": "Layers",
+    "files": "{{n}} files",
+    "withoutPart": "{{n}} of {{total}} BOM lines have no JLCPCB part number (LCSC). JLCPCB will ask you to pick those parts."
+  },
+  "render": {
+    "side": "Side",
+    "top": "Top",
+    "bottom": "Bottom",
+    "run": "Render",
+    "running": "Rendering",
+    "enlarge": "Full screen",
+    "alt": "Render of the board, {{side}} side",
+    "empty": "A photo-like picture of the board, made by KiCad."
+  },
+  "step": {
+    "label": "3D model (STEP)",
+    "make": "Make the STEP model",
+    "running": "Exporting",
+    "parts": "Open it in Parts to explode the board part by part."
+  },
+  "error": {
+    "generic": "Something failed: {{code}}",
+    "NO_HOST": "Open the workshop inside Mnemosyne OS.",
+    "KICAD_NOT_FOUND": "KiCad is not installed on this computer.",
+    "KICAD_TOO_OLD": "This KiCad is too old for the workshop.",
+    "KICAD_TIMEOUT": "KiCad took too long and was stopped.",
+    "KICAD_FILE_UNREADABLE": "KiCad could not read this file.",
+    "KICAD_FAILED": "KiCad stopped with an error.",
+    "KICAD_OUTPUT_TOO_LARGE": "KiCad's answer was too large.",
+    "BUSY": "Another job is running. Wait for it to end.",
+    "UNKNOWN_PROJECT": "This project is no longer in the list.",
+    "PROJECT_GONE": "The project's files are gone from their folder.",
+    "NO_BOARD": "This project has no board file (.kicad_pcb).",
+    "NO_SCHEMATIC": "This project has no schematic file (.kicad_sch).",
+    "SOURCES_TOO_LARGE": "This project is too large to draw here. The checks still work.",
+    "NOT_A_KICAD_FILE": "Pick a .kicad_pro, .kicad_pcb or .kicad_sch file.",
+    "TOO_MANY_PROJECTS": "The list is full. Remove a project first.",
+    "STORE_UNREADABLE": "The project list could not be read.",
+    "REPORT_UNREADABLE": "KiCad's report could not be read.",
+    "POSITIONS_UNREADABLE": "The placement file could not be read.",
+    "NOTHING_PLOTTED": "KiCad wrote no Gerber file.",
+    "NOTHING_WRITTEN": "KiCad wrote no file.",
+    "NOTHING_TO_SHOW": "Nothing made yet for this view.",
+    "PERMISSION_DENIED": "The workshop is not allowed to write to its memory.",
+    "FILE_LOCKED": "A file is open in another program. Close it and try again.",
+    "FILE_MISSING": "A file of the project is missing.",
+    "DISK_FULL": "The disk is full.",
+    "INTERNAL_ERROR": "Something failed inside Mnemosyne OS. The app log has the details.",
+    "UNKNOWN_FABRICATOR": "This board maker is not supported yet.",
+    "UNKNOWN_SIDE": "The side must be top or bottom.",
+    "BOM_UNREADABLE": "The bill of materials could not be read.",
+    "STORE_WRITE_FAILED": "The project list could not be saved.",
+    "NO_PROJECT": "Open a project first."
+  },
+  "explain": {
+    "_other": "KiCad flags this item. Open the board in KiCad at the place shown to see what it means.",
+    "clearance": "Two copper items are closer than the rules allow. The maker cannot etch them apart, and they may touch.",
+    "unconnected_items": "A connection drawn in the schematic has no track on the board yet.",
+    "track_width": "A track is thinner than the rules allow. It may break or carry too little current.",
+    "hole_clearance": "A hole is too close to copper. The drill may cut into it.",
+    "copper_edge_clearance": "Copper is too close to the board edge. Cutting the board may expose or cut it.",
+    "courtyards_overlap": "Two parts claim the same space. They may not both fit when assembled.",
+    "silk_overlap": "Two printed texts or drawings overlap and will be hard to read.",
+    "silk_over_copper": "Printed ink lies on a pad. The maker usually clips it.",
+    "solder_mask_bridge": "Solder mask is missing between two pads. Solder may bridge them.",
+    "annular_width": "The copper ring around a hole is too thin. The hole may break out of it.",
+    "drill_out_of_range": "A hole is smaller or larger than the rules allow.",
+    "hole_to_hole": "Two holes are too close. The board between them may crack.",
+    "invalid_outline": "The board outline is not a closed shape. The maker cannot cut it.",
+    "isolated_copper": "A copper area is connected to nothing. It is usually useless.",
+    "starved_thermal": "A pad in a copper zone has too few spokes. It may not be connected well.",
+    "track_dangling": "A track ends in the void, connected to nothing at one end.",
+    "via_dangling": "A via connects to nothing, or to one layer only.",
+    "lib_footprint_issues": "KiCad cannot find this part's footprint library on this computer. The board is fine; the link to the library is not.",
+    "lib_footprint_mismatch": "This footprint differs from the one in its library.",
+    "missing_footprint": "A part of the schematic is missing from the board.",
+    "extra_footprint": "A part on the board is not in the schematic.",
+    "duplicate_footprints": "Two parts on the board have the same reference.",
+    "net_conflict": "A pad's connection on the board differs from the schematic.",
+    "shorting_items": "Two different nets touch: this is a short circuit.",
+    "pin_not_connected": "A pin of a part is connected to nothing. Mark it « not connected » if that is intended.",
+    "pin_not_driven": "An input pin receives no signal from any output.",
+    "power_pin_not_driven": "A power pin is connected to nothing that supplies power. Add a power flag if the supply comes from a connector.",
+    "label_dangling": "A label is attached to no wire.",
+    "wire_dangling": "A wire ends in the void.",
+    "pin_to_pin": "Two pins that should not be joined are connected, for example two outputs.",
+    "unannotated": "A part has no number yet (R?). Annotate the schematic.",
+    "duplicate_reference": "Two parts of the schematic have the same reference.",
+    "lib_symbol_issues": "KiCad cannot find this symbol's library on this computer.",
+    "multiple_net_names": "One wire carries two different names.",
+    "global_label_dangling": "A global label is attached to no wire.",
+    "endpoint_off_grid": "A wire or pin end is off the grid. It may look connected and not be.",
+    "footprint_link_issues": "The footprint chosen for a symbol cannot be found.",
+    "text_thickness": "A text line is too thin for the board maker to print.",
+    "text_height": "A text is too small for the board maker to print.",
+    "silk_edge_clearance": "Printed ink is too close to the board edge. It may be cut off.",
+    "holes_co_located": "Two holes are at the same place. One of them is probably a mistake."
+  }
+}

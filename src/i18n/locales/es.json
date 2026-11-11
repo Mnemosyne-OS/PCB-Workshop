@@ -1,0 +1,196 @@
+{
+  "app": {
+    "title": "Taller PCB"
+  },
+  "kicad": {
+    "looking": "buscando…",
+    "absent": "no instalado",
+    "tooOld": "se necesita la versión {{min}} o posterior"
+  },
+  "level": {
+    "label": "Nivel",
+    "beginner": "Principiante",
+    "maker": "Aficionado",
+    "pro": "Pro"
+  },
+  "projects": {
+    "label": "Proyectos",
+    "add": "Añadir",
+    "none": "Todavía no hay proyectos.",
+    "missing": "archivos ausentes",
+    "board": "placa",
+    "schematic": "esquema",
+    "forget": "Quitar {{name}} de la lista"
+  },
+  "state": {
+    "loading": "Cargando…",
+    "reading": "Leyendo los archivos…"
+  },
+  "action": {
+    "dismiss": "Cerrar",
+    "showFolder": "Mostrar en la carpeta",
+    "close": "Cerrar"
+  },
+  "views": {
+    "label": "Vistas",
+    "board": "Placa",
+    "schematic": "Esquema",
+    "check": "Revisar",
+    "order": "Pedido",
+    "render": "Render",
+    "noBoard": "Este proyecto no tiene archivo .kicad_pcb.",
+    "noSchematic": "Este proyecto no tiene archivo .kicad_sch.",
+    "readAgain": "Volver a leer"
+  },
+  "first": {
+    "label": "Primeros pasos",
+    "install": "Instalar KiCad 10",
+    "download": "Descargar",
+    "demo": "Abrir una placa de demostración, o tu propio proyecto",
+    "add": "Añadirlo aquí con « Añadir »",
+    "check": "Revisar la placa",
+    "render": "Ver la placa en 3D",
+    "order": "Preparar los archivos para el fabricante",
+    "demoWhere": "KiCad instala placas de demostración en su carpeta share/kicad/demos. StickHub es una placa pequeña para empezar."
+  },
+  "severity": {
+    "error": "Error",
+    "warning": "Aviso",
+    "exclusion": "Excluido",
+    "other": "Nota"
+  },
+  "check": {
+    "run": "Revisar",
+    "running": "Revisando",
+    "drc": "Placa (DRC)",
+    "erc": "Esquema (ERC)",
+    "notRun": "Todavía no revisado.",
+    "counts": "{{errors}} errores · {{warnings}} avisos",
+    "truncated": "El informe es largo: se listan los 500 primeros puntos, los totales los incluyen todos.",
+    "none": "No se encontró nada.",
+    "excluded": "Excluido en KiCad por el diseñador"
+  },
+  "verdict": {
+    "unknown": "Sin revisar",
+    "blocked": "Errores por corregir",
+    "warnings": "Avisos por revisar",
+    "clean": "Lista para pedir"
+  },
+  "keep": {
+    "button": "Guardar en la memoria",
+    "saved": "Guardado en la memoria del taller."
+  },
+  "order": {
+    "maker": "Fabricante",
+    "make": "Preparar el pedido",
+    "running": "Preparando",
+    "before": {
+      "unknown": "Revisa la placa antes de pedirla.",
+      "blocked": "La revisión encontró errores. Una placa fabricada así puede no funcionar.",
+      "warnings": "La revisión encontró avisos. Léelos antes de pedir."
+    },
+    "empty": "Archivos Gerber, taladrado, lista de materiales y colocación, en el formato que pide JLCPCB.",
+    "step": {
+      "zip": "Sube {{zip}} en la página de presupuesto",
+      "assembly": "Para el montaje, añade los archivos BOM y CPL de la misma carpeta",
+      "upload": "Abrir la página de presupuesto"
+    },
+    "layers": "Capas",
+    "files": "{{n}} archivos",
+    "withoutPart": "{{n}} de {{total}} líneas de la lista de materiales no tienen número de pieza JLCPCB (LCSC). JLCPCB te pedirá elegir esas piezas."
+  },
+  "render": {
+    "side": "Cara",
+    "top": "Superior",
+    "bottom": "Inferior",
+    "run": "Render",
+    "running": "Renderizando",
+    "enlarge": "Pantalla completa",
+    "alt": "Render de la placa, cara {{side}}",
+    "empty": "Una imagen de la placa como una foto, hecha por KiCad."
+  },
+  "step": {
+    "label": "Modelo 3D (STEP)",
+    "make": "Exportar el modelo STEP",
+    "running": "Exportando",
+    "parts": "Ábrelo en Parts para despiezar la placa pieza a pieza."
+  },
+  "error": {
+    "generic": "Algo falló: {{code}}",
+    "NO_HOST": "Abre el taller dentro de Mnemosyne OS.",
+    "KICAD_NOT_FOUND": "KiCad no está instalado en este ordenador.",
+    "KICAD_TOO_OLD": "Este KiCad es demasiado antiguo para el taller.",
+    "KICAD_TIMEOUT": "KiCad tardó demasiado y se detuvo.",
+    "KICAD_FILE_UNREADABLE": "KiCad no pudo leer este archivo.",
+    "KICAD_FAILED": "KiCad se detuvo con un error.",
+    "KICAD_OUTPUT_TOO_LARGE": "La respuesta de KiCad era demasiado grande.",
+    "BUSY": "Hay otro trabajo en curso. Espera a que termine.",
+    "UNKNOWN_PROJECT": "Este proyecto ya no está en la lista.",
+    "PROJECT_GONE": "Los archivos del proyecto ya no están en su carpeta.",
+    "NO_BOARD": "Este proyecto no tiene archivo de placa (.kicad_pcb).",
+    "NO_SCHEMATIC": "Este proyecto no tiene archivo de esquema (.kicad_sch).",
+    "SOURCES_TOO_LARGE": "Este proyecto es demasiado grande para dibujarlo aquí. Las revisiones siguen funcionando.",
+    "NOT_A_KICAD_FILE": "Elige un archivo .kicad_pro, .kicad_pcb o .kicad_sch.",
+    "TOO_MANY_PROJECTS": "La lista está llena. Quita primero un proyecto.",
+    "STORE_UNREADABLE": "No se pudo leer la lista de proyectos.",
+    "REPORT_UNREADABLE": "No se pudo leer el informe de KiCad.",
+    "POSITIONS_UNREADABLE": "No se pudo leer el archivo de colocación.",
+    "NOTHING_PLOTTED": "KiCad no escribió ningún archivo Gerber.",
+    "NOTHING_WRITTEN": "KiCad no escribió ningún archivo.",
+    "NOTHING_TO_SHOW": "Todavía no se ha producido nada para esta vista.",
+    "PERMISSION_DENIED": "El taller no tiene permiso para escribir en su memoria.",
+    "FILE_LOCKED": "Un archivo está abierto en otro programa. Ciérralo y vuelve a intentarlo.",
+    "FILE_MISSING": "Falta un archivo del proyecto.",
+    "DISK_FULL": "El disco está lleno.",
+    "INTERNAL_ERROR": "Algo falló dentro de Mnemosyne OS. El registro de la app tiene los detalles.",
+    "UNKNOWN_FABRICATOR": "Este fabricante aún no está disponible.",
+    "UNKNOWN_SIDE": "La cara debe ser superior o inferior.",
+    "BOM_UNREADABLE": "No se pudo leer la lista de materiales.",
+    "STORE_WRITE_FAILED": "No se pudo guardar la lista de proyectos.",
+    "NO_PROJECT": "Abre primero un proyecto."
+  },
+  "explain": {
+    "_other": "KiCad señala este elemento. Abre la placa en KiCad en el lugar indicado para ver qué significa.",
+    "clearance": "Dos elementos de cobre están más cerca de lo que permiten las reglas. El fabricante no puede separarlos y pueden tocarse.",
+    "unconnected_items": "Una conexión dibujada en el esquema aún no tiene pista en la placa.",
+    "track_width": "Una pista es más fina de lo que permiten las reglas. Puede romperse o llevar poca corriente.",
+    "hole_clearance": "Un taladro está demasiado cerca del cobre. La broca puede cortarlo.",
+    "copper_edge_clearance": "Hay cobre demasiado cerca del borde de la placa. El corte puede dejarlo al aire o cortarlo.",
+    "courtyards_overlap": "Dos componentes ocupan el mismo sitio. Puede que no quepan los dos al montarlos.",
+    "silk_overlap": "Dos textos o dibujos impresos se solapan y serán difíciles de leer.",
+    "silk_over_copper": "La tinta impresa cae sobre un pad. El fabricante suele recortarla.",
+    "solder_mask_bridge": "Falta máscara de soldadura entre dos pads. La soldadura puede unirlos.",
+    "annular_width": "El anillo de cobre alrededor de un taladro es demasiado fino. El taladro puede salirse de él.",
+    "drill_out_of_range": "Un taladro es más pequeño o más grande de lo que permiten las reglas.",
+    "hole_to_hole": "Dos taladros están demasiado cerca. La placa puede romperse entre ellos.",
+    "invalid_outline": "El contorno de la placa no es una forma cerrada. El fabricante no puede cortarla.",
+    "isolated_copper": "Una zona de cobre no está conectada a nada. Normalmente no sirve.",
+    "starved_thermal": "Un pad dentro de una zona de cobre tiene pocos radios. Puede quedar mal conectado.",
+    "track_dangling": "Una pista termina en el vacío, sin conexión en un extremo.",
+    "via_dangling": "Una vía no está conectada a nada, o solo a una capa.",
+    "lib_footprint_issues": "KiCad no encuentra la biblioteca de huellas de este componente en este ordenador. La placa está bien; falla el enlace con la biblioteca.",
+    "lib_footprint_mismatch": "Esta huella difiere de la de su biblioteca.",
+    "missing_footprint": "Falta en la placa un componente del esquema.",
+    "extra_footprint": "Un componente de la placa no está en el esquema.",
+    "duplicate_footprints": "Dos componentes de la placa tienen la misma referencia.",
+    "net_conflict": "La conexión de un pad en la placa difiere del esquema.",
+    "shorting_items": "Dos señales distintas se tocan: es un cortocircuito.",
+    "pin_not_connected": "Un pin de un componente no está conectado a nada. Márcalo « no conectado » si es intencionado.",
+    "pin_not_driven": "Un pin de entrada no recibe señal de ninguna salida.",
+    "power_pin_not_driven": "Un pin de alimentación no está conectado a ninguna fuente. Añade una bandera de alimentación si la corriente viene de un conector.",
+    "label_dangling": "Una etiqueta no está unida a ningún cable.",
+    "wire_dangling": "Un cable termina en el vacío.",
+    "pin_to_pin": "Dos pines que no deben unirse están conectados, por ejemplo dos salidas.",
+    "unannotated": "Un componente aún no tiene número (R?). Anota el esquema.",
+    "duplicate_reference": "Dos componentes del esquema tienen la misma referencia.",
+    "lib_symbol_issues": "KiCad no encuentra la biblioteca de este símbolo en este ordenador.",
+    "multiple_net_names": "Un mismo cable lleva dos nombres distintos.",
+    "global_label_dangling": "Una etiqueta global no está unida a ningún cable.",
+    "endpoint_off_grid": "El extremo de un cable o pin está fuera de la rejilla. Puede parecer conectado sin estarlo.",
+    "footprint_link_issues": "No se encuentra la huella elegida para un símbolo.",
+    "text_thickness": "Un trazo de texto es demasiado fino para que el fabricante lo imprima.",
+    "text_height": "Un texto es demasiado pequeño para que el fabricante lo imprima.",
+    "silk_edge_clearance": "La tinta impresa está demasiado cerca del borde de la placa. Puede quedar cortada.",
+    "holes_co_located": "Dos taladros están en el mismo sitio. Probablemente uno es un error."
+  }
+}
