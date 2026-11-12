@@ -30,7 +30,7 @@ export function FirstSteps({ t, level, kicad }: { t: T; level: Level; kicad: Kic
   const installed = !!kicad?.found && kicad.supported;
   const steps = ['install', 'demo', 'add', 'check', 'render', 'order'] as const;
   return (
-    <section className="card hud first">
+    <section className="card panel first">
       <span className="lab">{t('first.label')}</span>
       <ol className="steps">
         {steps.map((s, i) => (
@@ -61,15 +61,15 @@ export function SourcesView({ t, view, sources, errText, onReadAgain }: {
     [value, view],
   );
   const again = <button type="button" onClick={onReadAgain}>{t('views.readAgain')}</button>;
-  if (!sources || sources.kind === 'loading') return <section className="card hud center"><Spinner label={t('state.reading')} /></section>;
+  if (!sources || sources.kind === 'loading') return <section className="card panel center"><Spinner label={t('state.reading')} /></section>;
   if (sources.kind === 'error') {
-    return <section className="card hud center"><div><p className="bad">{errText(sources.code)}</p>{again}</div></section>;
+    return <section className="card panel center"><div><p className="bad">{errText(sources.code)}</p>{again}</div></section>;
   }
   const tooLarge = view === 'board' ? sources.value.boardTooLarge : sources.value.schematicTooLarge;
-  if (tooLarge) return <section className="card hud center"><p className="muted">{t('error.SOURCES_TOO_LARGE')}</p></section>;
-  if (!files.length) return <section className="card hud center"><p className="muted">{t(view === 'board' ? 'views.noBoard' : 'views.noSchematic')}</p></section>;
+  if (tooLarge) return <section className="card panel center"><p className="muted">{t('error.SOURCES_TOO_LARGE')}</p></section>;
+  if (!files.length) return <section className="card panel center"><p className="muted">{t(view === 'board' ? 'views.noBoard' : 'views.noSchematic')}</p></section>;
   return (
-    <section className="card hud viewer-card">
+    <section className="card panel viewer-card">
       <div className="viewer-bar">{again}</div>
       <KicadViewer files={files} label={t(`views.${view}`)} />
     </section>
@@ -122,7 +122,7 @@ export function CheckView(p: {
   const { t } = p;
   const verdict = verdictOf(p.drc, p.erc, p.needs);
   return (
-    <section className="card hud">
+    <section className="card panel">
       <div className="bar">
         <button type="button" className="primary" disabled={p.disabled} onClick={p.onCheck}>{t('check.run')}</button>
         {p.busy === 'check' && <Spinner label={t('check.running')} />}
@@ -155,7 +155,7 @@ export function OrderView(p: {
   const { t } = p;
   const verdict = verdictOf(p.drc, p.erc, p.needs);
   return (
-    <section className="card hud">
+    <section className="card panel">
       <div className="bar">
         <div className="segmented" role="radiogroup" aria-label={t('order.maker')}>
           <button type="button" role="radio" aria-checked className="chosen">JLCPCB</button>
@@ -209,7 +209,7 @@ export function RenderView(p: {
   const [full, setFull] = useState(false);
   return (
     <div className="grid">
-      <section className="card hud full">
+      <section className="card panel full">
         <div className="bar">
           <div className="segmented" role="radiogroup" aria-label={t('render.side')}>
             {(['top', 'bottom'] as const).map((s) => (
@@ -229,7 +229,7 @@ export function RenderView(p: {
         ) : p.busy !== 'render' && <p className="muted">{t('render.empty')}</p>}
       </section>
 
-      <section className="card hud">
+      <section className="card panel">
         <span className="lab">{t('step.label')}</span>
         <div className="bar">
           <button type="button" disabled={p.disabled} onClick={p.onStep}>{t('step.make')}</button>

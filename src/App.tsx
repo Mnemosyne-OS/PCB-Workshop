@@ -280,7 +280,7 @@ export default function App(): JSX.Element {
   const needs = { board: !!current?.hasBoard, schematic: !!current?.hasSchematic };
 
   return (
-    <div className="hud-root">
+    <div className="pcb-root">
       {list && (
         <PcbAgentActions
           kicad={kicad.kind === 'ready' ? kicad.value : null} needs={needs} projects={list} current={current} view={view} busy={busy} lastError={lastError}
@@ -292,7 +292,7 @@ export default function App(): JSX.Element {
         />
       )}
 
-      <header className="top hud">
+      <header className="top panel">
         <div className="brand">
           <span className="lab">01</span>
           <h1>{t('app.title')}</h1>
@@ -317,7 +317,7 @@ export default function App(): JSX.Element {
       </header>
 
       <div className="body">
-        <aside className="rail hud" aria-label={t('projects.label')}>
+        <aside className="rail panel" aria-label={t('projects.label')}>
           <div className="rail-head">
             <span className="lab">02 · {t('projects.label')}</span>
             <button type="button" className="primary" onClick={() => void addProject()} disabled={!hasHost()}>

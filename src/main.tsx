@@ -18,7 +18,11 @@ kicanvas.src = `${import.meta.env.BASE_URL}vendor/kicanvas.js`;
 kicanvas.onerror = () => console.error('[PCB] the KiCanvas viewer could not be loaded');
 document.head.appendChild(kicanvas);
 
-/** The workshop draws its own HUD night (style §1); it takes the host's language only. */
+/**
+ * The workshop follows the app's theme (style-cartouche §0): the SDK writes the
+ * host's live variables on :root, app.css only reads them. The KiCanvas drawing
+ * keeps KiCad's own dark canvas in every theme, like a photo in a lightbox.
+ */
 onHostConfig((cfg) => {
   adoptHostLang(cfg.lang);
 });
