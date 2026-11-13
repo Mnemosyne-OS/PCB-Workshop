@@ -1,6 +1,6 @@
 {
   "name": "@mnemosyne-plugins/pcb",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "A PCB workshop driving KiCad: view the board and schematic, check them, render the board, and prepare the files a board maker asks for.",

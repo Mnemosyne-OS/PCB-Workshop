@@ -18,6 +18,10 @@ kicanvas.src = `${import.meta.env.BASE_URL}vendor/kicanvas.js`;
 kicanvas.onerror = () => console.error('[PCB] the KiCanvas viewer could not be loaded');
 document.head.appendChild(kicanvas);
 
+// Inside a Mnemosyne OS window, before the first paint: the window paints the
+// ground and the page stays transparent (`html.in-host` in the CSS).
+if (window.parent !== window) document.documentElement.classList.add('in-host');
+
 /**
  * The workshop follows the app's theme (style-cartouche §0): the SDK writes the
  * host's live variables on :root, app.css only reads them. The KiCanvas drawing

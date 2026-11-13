@@ -30,6 +30,16 @@
 
 html, body, #root { height: 100%; margin: 0; background: var(--p-void); }
 
+/* Inside a Mnemosyne OS window (2026-11-12): the window paints the theme's
+   ground (glass, grey or white) and this frame stays transparent. Painted
+   here, the ground variable showed the board's colour, a black block in a
+   glass window. main.tsx sets `in-host` before the first paint. */
+html.in-host, html.in-host body, html.in-host .pcb-root { background: transparent; }
+/* The frame's color-scheme must be the app's: when they differ, Chromium
+   paints an opaque white canvas behind a transparent page (measured). */
+:root { color-scheme: dark; }
+:root[data-theme='light'] { color-scheme: light; }
+
 .pcb-root {
   height: 100%;
   display: flex;
